@@ -1,6 +1,8 @@
 from tkinter import*
+from math import*
 mansLogs=Tk()
 
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def btnClick(number):
     current=e.get() # nolasa esošo skaitli
     e.delete(0,END)#nodzēš
@@ -26,6 +28,8 @@ def btnEquals():
         result=num1 - num2
     elif mathOp=="X":
         result=num1 * num2
+    elif mathOp =="%":
+        result=0.01*num1*num2
     else:
         result=num1/num2
     e.delete(0,END)
@@ -38,27 +42,31 @@ def btnClear():
     mathOp=""
     return 0
     
-
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 e=Entry(mansLogs,width=15,font=("Arial Black",20))
-btn0=Button(mansLogs, width=1, text="0",padx="40", pady="20", command=lambda:btnClick(0))
-btn1=Button(mansLogs, width=1, text="1",padx="40", pady="20", command=lambda:btnClick(1))
-btn2=Button(mansLogs, width=1, text="2",padx="40", pady="20", command=lambda:btnClick(2))
-btn3=Button(mansLogs, width=1, text="3",padx="40", pady="20", command=lambda:btnClick(3))
-btn4=Button(mansLogs, width=1, text="4",padx="40", pady="20", command=lambda:btnClick(4))
-btn5=Button(mansLogs, width=1, text="5",padx="40", pady="20", command=lambda:btnClick(5))
-btn6=Button(mansLogs, width=1, text="6",padx="40", pady="20", command=lambda:btnClick(6))
-btn7=Button(mansLogs, width=1, text="7",padx="40", pady="20", command=lambda:btnClick(7))
-btn8=Button(mansLogs, width=1, text="8",padx="40", pady="20", command=lambda:btnClick(8))
-btn9=Button(mansLogs, width=1, text="9",padx="40", pady="20", command=lambda:btnClick(9))
+btn0=Button(mansLogs, width=1, text="0",padx="40", pady="20",bg="light pink", command=lambda:btnClick(0))
+btn1=Button(mansLogs, width=1, text="1",padx="40", pady="20",bg="light pink", command=lambda:btnClick(1))
+btn2=Button(mansLogs, width=1, text="2",padx="40", pady="20",bg="light pink", command=lambda:btnClick(2))
+btn3=Button(mansLogs, width=1, text="3",padx="40", pady="20",bg="light pink", command=lambda:btnClick(3))
+btn4=Button(mansLogs, width=1, text="4",padx="40", pady="20",bg="light pink", command=lambda:btnClick(4))
+btn5=Button(mansLogs, width=1, text="5",padx="40", pady="20",bg="light pink", command=lambda:btnClick(5))
+btn6=Button(mansLogs, width=1, text="6",padx="40", pady="20",bg="light pink", command=lambda:btnClick(6))
+btn7=Button(mansLogs, width=1, text="7",padx="40", pady="20",bg="light pink", command=lambda:btnClick(7))
+btn8=Button(mansLogs, width=1, text="8",padx="40", pady="20",bg="light pink", command=lambda:btnClick(8))
+btn9=Button(mansLogs, width=1, text="9",padx="40", pady="20",bg="light pink", command=lambda:btnClick(9))
 btnplus=Button(mansLogs, width=1, text="+",padx="40", pady="20", command=lambda:btnCommand("+"))
 btnminus=Button(mansLogs, width=1, text="-",padx="40", pady="20", command=lambda:btnCommand("-"))
 btntimes=Button(mansLogs, width=1, text="X",padx="40", pady="20", command=lambda:btnCommand("X"))
 btndevide=Button(mansLogs, width=1, text="/",padx="40", pady="20", command=lambda:btnCommand("/"))
-btnequals=Button(mansLogs, width=1, text="=",padx="40", pady="20", command=btnEquals)
-btnclear=Button(mansLogs, width=1, text="C",padx="40", pady="20", command=btnClear)
+btnequals=Button(mansLogs, width=1, text="=",padx="40", pady="20",bg="light pink", command=btnEquals)
+btnclear=Button(mansLogs, width=1, text="C",padx="40", pady="20",bg="light pink", command=btnClear)
+btnpercent=Button(mansLogs, width=1, text="%",padx="40", pady="20", command=lambda:btnCommand("%"))
 
-e.grid(row=0,column=0,columnspan=4)
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+e.grid(row=0,column=0,columnspan=3)
+btnpercent.grid(row=0, column=3)
 
 btn7.grid(row=1,column=0)
 btn8.grid(row=1,column=1)
