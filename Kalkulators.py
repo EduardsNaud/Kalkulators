@@ -54,7 +54,6 @@ def btnkapinasana():
     e.insert(0,num2)
 
 def btnsakne():
-    global operator
     global num1
     global mathOp
     mathOp=command
@@ -88,13 +87,13 @@ btn6=Button(mansLogs, width=1, text="6",padx="40", pady="20",bg="light pink", co
 btn7=Button(mansLogs, width=1, text="7",padx="40", pady="20",bg="light pink", command=lambda:btnClick(7))
 btn8=Button(mansLogs, width=1, text="8",padx="40", pady="20",bg="light pink", command=lambda:btnClick(8))
 btn9=Button(mansLogs, width=1, text="9",padx="40", pady="20",bg="light pink", command=lambda:btnClick(9))
-btnplus=Button(mansLogs, width=1, text="+",padx="40", pady="20", command=lambda:btnCommand("+"))
-btnminus=Button(mansLogs, width=1, text="-",padx="40", pady="20", command=lambda:btnCommand("-"))
-btntimes=Button(mansLogs, width=1, text="X",padx="40", pady="20", command=lambda:btnCommand("X"))
-btndevide=Button(mansLogs, width=1, text="/",padx="40", pady="20", command=lambda:btnCommand("/"))
+btnplus=Button(mansLogs, width=1, text="+",padx="40", pady="20",bg="light gray", command=lambda:btnCommand("+"))
+btnminus=Button(mansLogs, width=1, text="-",padx="40", pady="20",bg="light gray", command=lambda:btnCommand("-"))
+btntimes=Button(mansLogs, width=1, text="X",padx="40", pady="20",bg="light gray", command=lambda:btnCommand("X"))
+btndevide=Button(mansLogs, width=1, text="/",padx="40", pady="20",bg="light gray", command=lambda:btnCommand("/"))
 btnequals=Button(mansLogs, width=1, text="=",padx="40", pady="20",bg="light pink", command=btnEquals)
 btnclear=Button(mansLogs, width=1, text="C",padx="40", pady="20",bg="light pink", command=btnClear)
-btnpercent=Button(mansLogs, width=1, text="%",padx="40", pady="20", command=lambda:btnCommand("%"))
+btnpercent=Button(mansLogs, width=1, text="%",padx="40", pady="20",bg="light gray", command=lambda:btnCommand("%"))
 btnkvadratsakne=Button(mansLogs, width=1, text="Sqrt",padx="40", pady="20",bg="light pink",command=btnsakne)
 btnkapinajums=Button(mansLogs, width=1, text="X^2",padx="40", pady="20",bg="light pink",command=btnkapinasana)
 btnlog=Button(mansLogs, width=1, text="Log",padx="40", pady="20",bg="light pink",command=btnLog)
